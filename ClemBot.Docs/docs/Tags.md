@@ -16,7 +16,7 @@ If you leave the server all your tags will become unowned, and be up for grabs f
 :::
 
 ### Inline Notation
-Tags in clembot can be invoked in the middle of a message by prefixing the tag name with a `$`. This allows for more organic tag usage in the middle of a conversation.
+Tags in clembot can be invoked in the middle of a message by prefixing the tag name with a tag prefix. This allows for more organic tag usage in the middle of a conversation.
 
 #### Example
 
@@ -161,4 +161,59 @@ Lists all unclaimed tags in the server
 
 ```
 !tag unclaimed
+```
+
+### Prefix
+If invoked with no prefix it will show current tag prefix.
+
+#### Format
+```txt title="List current tag prefix in the server"
+!tag prefix
+```
+
+```txt title="Invoke inline tag with tag prefix"
+<tag prefix><tagname>
+```
+#### Example
+
+```
+!tag prefix
+```
+
+```
+$mytagname
+```
+
+### Set Prefix
+If invoked with a prefix it will set that prefix as new tag prefix
+
+#### Format
+```txt title="Setting a new tag prefix"
+!tag prefix <new prefix>
+```
+
+#### Example
+
+```
+!tag prefix (
+```
+
+### Prefix Reset
+If invoked with reset it will reset the server tag prefix to `$`.
+#### Aliases
+* `revert`
+
+#### Format
+```txt title="Reset tag prefix for server"
+!tag prefix reset
+```
+
+#### Example
+
+```
+!tag prefix reset
+```
+
+```
+!tag prefix revert
 ```
